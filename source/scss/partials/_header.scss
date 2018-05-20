@@ -1,0 +1,131 @@
+
+
+nav {
+  height:42px;
+  background:$nav-blue;
+  #vismapro, #cartnav {
+    list-style:none;
+    display:inline-block;
+    li {
+      display:block;
+      float:left;
+      a {
+        @include links($white, $white, yellow, teal);
+        text-decoration:none;
+      }
+    }
+  }
+  #vismapro {
+    li:first-child {
+      font-size:20px;
+      padding:6px 0px;
+      a {
+        padding:8px 20px 8px 0;
+      }
+    }
+    li {
+      font-size:18px;
+      padding:8px 0 8px 0px;
+      border-right:1px solid $dividers;
+      a {
+        padding:8px 20px;
+      }
+    }
+  }
+  #cartnav {
+    margin-right:-15px;
+    li:first-child {
+      padding:0;
+      .cart-green {
+        width:300px;
+        height:42px;
+        box-shadow: inset 0px 0px 0px 1px rgba(34, 102, 0, 0.45);
+        background: $green-gradient;
+        border-left:1px solid $dividers;
+        .icon-div {
+          position:relative;
+          height:42px;
+          .icon-tag {
+            position:absolute;
+            width:27px;
+            height:16px;
+            background:$white;
+            border-radius:15px;
+            font-size:12px;
+            padding:0 0 1px 4px;
+            top:8px;
+            left:25px;
+            font-weight:bold;
+          }
+          .cart-icon {
+            position:absolute;
+            padding:11px 8px;
+          }
+          a {
+            position:absolute;
+            right:70px;
+            font-size:12px;
+            top:7px;
+            padding:0;
+          }
+          span {
+            font-size:18px;
+            font-weight:bold;
+          }
+          .arrow-down {
+            position:absolute;
+            padding:20px 14px;
+            right:0;
+          }
+        }
+      }
+    }
+    li {
+      border-right:1px solid $dividers;
+      height:42px;
+      padding:7px 0px;
+      a {
+        padding:12px 12px;
+      }
+    }
+    li:last-child {
+      border-right:none;
+    }
+  }
+}
+header {
+  padding: 15px 0;
+  .col-md-2 {
+    padding-right:0px;
+  }
+  .shop-info {
+    height:42px;
+    border-radius:4px;
+    display:flex;
+    align-items:center;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12);
+    background: linear-gradient(rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0.6) 80%, rgba(255, 255, 255, 1) 100%);
+    color: $black;
+    padding-left:15px;
+    img {
+      position:absolute;
+      right:5px;
+    }
+    div {
+      font-size:12px;
+      font-weight:bold;
+      line-height:1.3;
+      span {
+        font-weight:normal;
+      }
+    }
+  }
+  .selected {
+    background: $btn-selected;
+    box-shadow: $inset-green;
+    display:flex;
+    align-items:center;
+    color: $white;
+    font-size:18px;
+  }
+}

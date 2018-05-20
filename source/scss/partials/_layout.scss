@@ -1,0 +1,30 @@
+body {
+  margin:0;
+  padding:0;
+  font-family:$body-font;
+  box-sizing:border-box;
+  background:$background-color;
+}
+table {
+
+    border-collapse: collapse;
+
+}
+
+td, th {
+    border: none;
+    text-align: left;
+
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+ul {
+  padding:0;
+  margin:0;
+}
+li {
+  margin:0;
+  padding:0;
+}

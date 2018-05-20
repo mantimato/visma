@@ -1,0 +1,96 @@
+#table-search {
+  background:$white;
+  height:83vh;
+  overflow:hidden;
+  hr {
+    margin:0 20px 12px 20px;
+  }
+}
+.input-section {
+  padding:20px 20px 0 20px;
+  .col-md-2, .col-md-1 {
+    padding:0;
+  }
+  .col-md-6 {
+    padding-right:0;
+  }
+  #search-box {
+    display:flex;
+    height:42px;
+    input {
+      font-size:16px;
+      flex-grow:1;
+      padding-left:15px;
+      border:2px solid $btn-selected;
+      box-shadow: $inset-green;
+      border-radius:2px 0 0 2px;
+    }
+    input::placeholder {
+      font-style:italic;
+      font-size:16px;
+    }
+    button {
+      background: $green-gradient;
+      border:none;
+      border-radius:0 2px 2px 0;
+      padding:0 10px;
+      text-decoration:none;
+      display:block;
+      cursor: pointer;
+    }
+  }
+  .avancerat {
+    @extend %flex;
+    a {
+      text-decoration:underline;
+      font-size:14px;
+    }
+  }
+  .check-flag {
+    @extend %flex;
+    img {
+      margin-left:8px;
+    }
+    input[type="checkbox"] {
+      background:red;
+    }
+  }
+  .pdf {
+    @extend %flex;
+  }
+}
+#all-invoices {
+  padding: 12px 20px;
+  button {
+    @extend %button-inv;
+  }
+  .inv-selected {
+    @extend %green-inv;
+  }
+}
+article {
+  padding:0 20px;
+  overflow-y:auto;
+  height:66vh;
+  #demo {
+    height:100%;
+    width:100%;
+    th {
+
+      color:$blue-text;
+      font-size:16px;
+      padding:0;
+      font-weight:normal;
+      img {
+        padding-left:7px;
+      }
+    }
+    .amounts {
+      font-weight:bold;
+      color:$blue-text;
+    }
+  }
+}
+.table-data {
+  display:none;
+}

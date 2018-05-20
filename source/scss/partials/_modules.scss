@@ -1,0 +1,20 @@
+%flex {
+  display:flex;
+  height:42px;
+  align-items:center;
+  justify-content:center;
+}
+%button-inv {
+  padding:2px 20px;
+  text-decoration:none;
+  border:1px solid rgba(0, 0, 0, 0.2);
+  border-radius:4px;
+  color:$black;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12);
+  background:linear-gradient(rgb(252,252,252) 100%, rgb(229,229,229) 25%, rgb(245,245,245) 0%);
+}
+%green-inv {
+  background: $btn-selected;
+  box-shadow: $inset-green;
+  color:$white;
+}
