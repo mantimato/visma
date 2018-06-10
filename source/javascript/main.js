@@ -10,38 +10,12 @@ myRequest.send();
 function showhtml(data) {
   let tohtml = "";
   data.forEach(function(element) {
-    tohtml += '<tr class="tiron"><td>' + element.invoiceNum + '</td><td>' + element.reference +
-    '</td><td>' + element.Supplier + '</td><td>' + element.Date + '</td><td>' +
-    element.Status + '</td><td><span class="amounts">' + element.Amounts + '</span> SEK</td><td>' + element.Organization +
-    '</td><td>'+ element.options + '<a href="#/"><img onclick="clicks()" class="append-div" src="public/assets/stylesheets/images/fsf.png"></a><a href="#/"><img src="public/assets/stylesheets/images/burg.png"></a></td></tr>' +
-    `<tr class="table-data">
-      <td>
-        <div class="table-data-inputs">
-          <form class="table-data-forms" action="index.html" method="post">
-            <div class="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-            </div>
-            <div class="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-              <input type="text" name="" value="">
-            </div>
-          </form>
-        </div>
-      </td>
-    </tr>`;
+    tohtml += '<tbody><tr class="tiron"><td><div class="expand-col"></div><div class="dfspace"></div>' + element.invoiceNum + '</td><td><div class="dfspace"></div>' + element.reference +
+    '</td><td><div class="dfspace"></div>' + element.Supplier + '</td><td><div class="dfspace"></div>' + element.Date + '</td><td><div class="dfspace"></div>' +
+    element.Status + '</td><td><div class="dfspace"></div><span class="amounts">' + element.Amounts + '<span class="sek"> SEK</span></span></td><td><div class="dfspace"></div>' + element.Organization +
+    '</td><td><div class="expand-col-right"></div><div class="dfspace"></div>'+ element.options + '<a class="append-tr" href="#/"><img class="arrow-select" src="public/assets/stylesheets/images/fsf.png"><img class="arrow-select1" src="public/assets/stylesheets/images/Selected.png"></a><a href="#/"><img src="public/assets/stylesheets/images/burg.png"></a></td></tr>' +
+    '<tr class="newtr"><td colspan="8"><form><input class="expand-input" type="text" name="" value="" placeholder="*Konto"><input class="expand-input" type="text" name="" value="" placeholder="*Kostnadsställe"><input class="expand-input" type="text" name="" value="" placeholder="*V-gren"><input class="expand-input" type="text" name="" value="" placeholder="*Aktivitet"><input class="expand-input" type="text" name="" value="" placeholder="Beskrivning"><input class="expand-input" type="text" name="" value="" placeholder="Projekt"><input class="expand-input" type="text" name="" value="" placeholder="Motpart"><input class="expand-input" type="text" name="" value=""placeholder="Period. kod"><div class="clip-sek"><img src="public/assets/stylesheets/images/Clipboard-normal.png"><div class="expand-sek">300.00 SEK</div></div></form></td></tr>' +
+    '<tr class="newtr1"><td colspan="8"><form><input class="expand-input" type="text" name="" value="" placeholder="*Konto"><input class="expand-input" type="text" name="" value="" placeholder="*Kostnadsställe"><input class="expand-input" type="text" name="" value="" placeholder="*V-gren"><input class="expand-input" type="text" name="" value="" placeholder="*Aktivitet"><input class="expand-input" type="text" name="" value="" placeholder="Beskrivning"><input class="expand-input" type="text" name="" value="" placeholder="Projekt"><input class="expand-input" type="text" name="" value="" placeholder="Motpart"><input class="expand-input" type="text" name="" value=""placeholder="Period. kod"><div class="clip-sek"><img src="public/assets/stylesheets/images/Cliptext-normal.png"><div class="expand-sek">300.00 SEK</div></div><a class="visalogg" href="#/">Visa logg</a></form><div class="space-to-bottom"></div></td></tr></tbody>';
   });
   //tohtml += '<tr><td>' + data[0].invoiceNum + '</td><td>' + data[0].reference + '</td><td>' + data[0].Supplier + '</td></tr>'
   tableCont.insertAdjacentHTML('beforeend', tohtml);
@@ -63,12 +37,28 @@ searchBar.addEventListener('keyup', function(e) {
   });
 });
 
+
+
+
+function panaikint() {
+  let naikink = document.querySelectorAll('.tablepvz');
+  for(let s = 0; s < naikink.length; s++) {
+  if(naikink[s].style.display === "none") {
+    naikink[s].style.display = "block";
+  } else {
+    naikink[s].style.display = "none";
+  }
+}
+}
+
 // table data box jquery
 
-
-
-
-
 $(document).ready(function() {
-
+  $('#demo').on('click', '.append-tr', function() {
+    $(this).closest('tbody').toggleClass('open');
+    $(this).closest('.tiron').toggleClass('active-tr');
+  });
+  $(".append-tr").click(function() {
+    $('.arrow-select, .arrow-select1', this).toggle();
+  });
 });

@@ -9,178 +9,189 @@
   <link rel="stylesheet" href="public/assets/stylesheets/style.css">
 </head>
 <body>
-  <nav>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <ul id="vismapro" class="float-left">
-            <li><a href="#/">Visma Proceedo</a></li>
-            <li><a href="#/">Home</a></li>
-            <li><a href="#/">Purchases</a></li>
-            <li><a href="#/">Invoices</a></li>
-          </ul>
-          <ul id="cartnav" class="float-right">
-            <li>
-              <div class="cart-green">
-                <div class="icon-div">
-                  <img class="cart-icon" src="public/assets/stylesheets/images/icon.png" alt="icon">
-                  <div class="icon-tag">99+</div>
-                  <a href="#/">Total <span>27.250,00</span> SEK</a>
-                  <img class="arrow-down" src="public/assets/stylesheets/images/arrow-down.png" alt="icon">
+  <div id="pagediv">
+    <div class="tablepvz">
+      <img src="public/assets/stylesheets/images/virsus.jpg" alt="">
+    </div>
+    <nav>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <ul id="vismapro" class="float-left">
+              <li><a href="#/">Visma Proceedo</a></li>
+              <li><a href="#/">Home</a></li>
+              <li><a href="#/">Purchases</a></li>
+              <li><a href="#/">Invoices</a></li>
+            </ul>
+            <ul id="cartnav" class="float-right">
+              <li>
+                <div id="cart-green">
+                  <div class="icon-div">
+                    <img class="cart-icon" src="public/assets/stylesheets/images/icon.png" alt="icon">
+                    <div class="icon-tag">99+</div>
+                    <a href="#/">Total <span>27.250,00</span> SEK</a>
+                    <img class="arrow-down" src="public/assets/stylesheets/images/arrow-down.png" alt="icon">
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li><a href="#/"><img class="cart-icon" src="public/assets/stylesheets/images/Help_Icon.png" alt="icon"></a></li>
-            <li><a href="#/"><img class="cart-icon" src="public/assets/stylesheets/images/User_Settings.png" alt="icon"></a></li>
-            <li><a href="#/"><img class="cart-icon" src="public/assets/stylesheets/images/Log_Out.png" alt="icon"></a></li>
-          </ul>
+              </li>
+              <li><a href="#/"><img class="cart-icon" src="public/assets/stylesheets/images/Help_Icon.png" alt="icon"></a></li>
+              <li><a href="#/"><img class="cart-icon" src="public/assets/stylesheets/images/User_Settings.png" alt="icon"></a></li>
+              <li><a href="#/"><img class="cart-icon" src="public/assets/stylesheets/images/Log_Out.png" alt="icon"></a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-  <header>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-9">
-          <div class="row">
-            <div class="col-md-2">
-              <div class="shop-info selected">
-              Invoice list
+    </nav>
+    <header>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-9 col-sm-12">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="shop-info selected">
+                Invoice list
+                </div>
               </div>
-            </div>
-            <div class="col-md-2">
-              <div class="shop-info">
-                <div>Wal-Mart<br><span>(250834398)</div>
-                <img class="cart-icon" src="public/assets/stylesheets/images/delete.png" alt="delete">
+              <div class="col-md-2">
+                <div class="shop-info">
+                  <div>Wal-Mart<br><span>(250834398)</div>
+                  <img class="cart-icon" src="public/assets/stylesheets/images/delete.png" alt="delete">
+                </div>
               </div>
-            </div>
-            <div class="col-md-2">
-              <div class="shop-info">
-                <div>Dell<br><span>(50080537)</span></div>
-                <img class="cart-icon" src="public/assets/stylesheets/images/delete.png" alt="delete">
+              <div class="col-md-2">
+                <div class="shop-info">
+                  <div>Dell<br><span>(50080537)</span></div>
+                  <img class="cart-icon" src="public/assets/stylesheets/images/delete.png" alt="delete">
+                </div>
               </div>
-            </div>
-            <div class="col-md-2">
-              <div class="shop-info">
-                <div>Prelek<br><span>(641001097)</span></div>
-                <img class="cart-icon" src="public/assets/stylesheets/images/delete.png" alt="delete">
+              <div class="col-md-2">
+                <div class="shop-info">
+                  <div>Prelek<br><span>(641001097)</span></div>
+                  <img class="cart-icon" src="public/assets/stylesheets/images/delete.png" alt="delete">
+                </div>
               </div>
-            </div>
-            <div class="col-md-2">
-              <div class="shop-info">
-                <div>UnitedHealth GR.<br><span>(10554020)</span></div>
-                <img class="cart-icon" src="public/assets/stylesheets/images/delete.png" alt="delete">
+              <div class="col-md-2">
+                <div class="shop-info">
+                  <div>UnitedHealth GR.<br><span>(10554020)</span></div>
+                  <img class="cart-icon" src="public/assets/stylesheets/images/delete.png" alt="delete">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <main>
+    </header>
+    <main>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-8">
-          <div id="table-search">
-            <section class="input-section">
-              <div class="row">
-                <div class="col-md-6">
-                  <form id="search-box" action="index.html" method="post">
-                    <input id="searchinput" type="text" name="" value="" placeholder="Search invoice, order, vertification, supplier etc...">
-                    <button type="button" name="button"><img src="public/assets/stylesheets/images/searchicon.png"></button>
-                  </form>
-                </div>
-                <div class="col-md-auto">
-                  <div class="avancerat">
-                    <a href="#/">Avancerat sök</a>
-                  </div>
-                </div>
-                <img src="public/assets/stylesheets/images/divider.png">
-                <div class="col-md-1">
-                  <div class="check-flag">
-                    <input type="checkbox" name="" value="">
-                    <img src="public/assets/stylesheets/images/flag.png">
-                  </div>
-                </div>
-                <img src="public/assets/stylesheets/images/divider.png">
-                <div class="col-md-1">
-                  <div class="pdf">
-                    <img src="public/assets/stylesheets/images/files.png">
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section id="all-invoices">
-              <div class="row">
-                <div class="col-md-12">
-                  <button class="inv-selected" type="button" name="button">All invoices</button>
-                  <button type="button" name="button">New invoices</button>
-                  <button type="button" name="button">Old invoices (368)</button>
-                </div>
-              </div>
-            </section>
-            <hr>
-            <article>
-              <div class="row">
-                <div class="col-md-12">
-                  <table id="demo">
-                    <tr>
-                      <th>Invoice Number</th>
-                      <th>Reference<img src="public/assets/stylesheets/images/SortingArrow.png"></th>
-                      <th>Supplier<img src="public/assets/stylesheets/images/SortingArrow.png"></th>
-                      <th>Date</th>
-                      <th>Status<img src="public/assets/stylesheets/images/SortingArrow.png"></th>
-                      <th>Amounts</th>
-                      <th>Organization<img src="public/assets/stylesheets/images/SortingArrow.png"></th>
-                      <th>Options</th>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </article>
-          </div> <!-- table-search -->
+        <div class="row">
+        <div class="col-md-8 dif-col-8">
+        <div class="tablepvz">
+          <img src="public/assets/stylesheets/images/tableno.jpg" alt="">
         </div>
-        <div class="col-md-4">
-          <div id="slideimg" class="container-fluid">
-            <div class="slidehead">
-              <div class="backbtn">
+            <div id="table-search">
+              <section id="input-section">
+                <div class="row">
+                  <div class="col-md-7">
+                    <form id="search-box" action="index.html" method="post">
+                      <input type="text" name="" value="" placeholder="Search invoice, order, vertification, supplier etc...">
+                      <button type="button" name="button"><img src="public/assets/stylesheets/images/searchicon.png"></button>
+                    </form>
+                  </div>
+                  <div class="col-md-auto">
+                    <div class="avancerat">
+                      <a href="#/">Avancerat sök</a>
+                    </div>
+                  </div>
+                  <img src="public/assets/stylesheets/images/divider.png">
+                  <div class="col-md-auto flag-less-pad">
+                    <div class="check-flag">
+                      <input type="checkbox" name="" value="">
+                      <img src="public/assets/stylesheets/images/flag.png">
+                    </div>
+                  </div>
+                  <img src="public/assets/stylesheets/images/divider.png">
+                  <div class="col-md-auto x-more-pad">
+                    <div class="pdf">
+                      <img src="public/assets/stylesheets/images/files.png">
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section id="all-invoices">
+                <div class="row">
+                  <div class="col-md-12">
+                    <button class="inv-selected" type="button" name="button">All invoices</button>
+                    <button type="button" name="button">New invoices</button>
+                    <button class="old-inv-pad" type="button" name="button">Old invoices (368)</button>
+                    <div class="filter-div">
+                      <img src="public/assets/stylesheets/images/filter.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <hr>
+              <section id="main-table" class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <table id="demo">
+                        <tr>
+                          <th>Invoice Number</th>
+                          <th>Reference<img src="public/assets/stylesheets/images/SortingArrow.png"></th>
+                          <th>Supplier<img src="public/assets/stylesheets/images/SortingArrow.png"></th>
+                          <th>Date</th>
+                          <th>Status<img src="public/assets/stylesheets/images/SortingArrow.png"></th>
+                          <th>Amounts</th>
+                          <th>Organization<img src="public/assets/stylesheets/images/SortingArrow.png"></th>
+                          <th>Options</th>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+              </section>
+            </div> <!-- table-search -->
+          </div><!-- col-md-8 -->
+          <div class="col-md-4 dif-col-4">
+            <div id="slideimg" class="container-fluid">
+              <div class="slidehead">
+                <div class="backbtn">
+                  <button onclick="panaikint()">panaikink</button>
+                </div>
+                <div class="slidenum">
+
+                </div>
+                <div class="slideheadikonos">
+                  <div class="">
+
+                  </div>
+                  <div class="">
+
+                  </div>
+                  <div class="">
+
+                  </div>
+                  <div class="">
+
+                  </div>
+                </div>
+              </div>
+              <div class="arrl">
 
               </div>
-              <div class="slidenum">
+              <div class="arrr">
 
               </div>
-              <div class="slideheadikonos">
-                <div class="">
-
-                </div>
-                <div class="">
-
-                </div>
-                <div class="">
-
-                </div>
-                <div class="">
-
-                </div>
-              </div>
             </div>
-            <div class="arrl">
-
-            </div>
-            <div class="arrr">
-
-            </div>
-          </div>
-        </div>
+          </div><!-- col-md-4 -->
+         </div><!-- row -->
       </div>
-    </div>
-  </main>
+    </main>
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="public/assets/javascript/bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="public/assets/javascript/bundle.js"></script>
+  </div>
 </body>
 </html>

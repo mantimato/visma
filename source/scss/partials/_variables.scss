@@ -5,9 +5,10 @@ $white: #fff;
 $dividers: rgba(255, 255, 255, 0.10);
 $body-font: 'Open Sans', sans-serif;
 $background-color: #f5f5f5;
-$btn-selected: #4d8400;
+$btn-selected: rgb(77, 132, 0);
 $black: #000;
-$blue-text: #0974b3;
+$blue-text: rgb(9, 116, 179);
 
-$inset-green: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.12);
+$inset-green: 0px 1px 0px 0px rgba(255, 255, 255, 0.5),inset 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
 $green-gradient: linear-gradient(#569400, #477a00);
+$table-expand: #f8f8f8;
